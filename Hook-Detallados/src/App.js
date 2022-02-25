@@ -1,10 +1,11 @@
-import State from "./components/State";
+// import State from "./components/State";
+import Effect from "./components/Effect";
 
 function App() {
   return (
     <div className="container text-center">
-      <h1>UseState</h1>
-      <State />
+      <Effect />
+      {/* <State /> */}
     </div>
   );
 }
