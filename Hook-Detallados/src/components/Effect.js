@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Effect = () => {
   const [users, setUsers] = useState([]);
+  const [id, setId] = useState(null);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -11,15 +12,19 @@ const Effect = () => {
       });
   }, []);
   console.log(users);
-  console.log(users);
+
+  //efectos con dependencia solo se ejecutara cuando el ID cambie
+  useEffect(() => {
+    setUsers([
+      {
+        hola: "cambie el ID",
+      },
+    ]);
+    console.log(users);
+  }, [id]);
   const HandleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
-    console.log({
-      name: "hola",
-      email: "brito@hotmail.com",
-      password: "1234",
-    });
+    setId(0);
   };
   return (
     <>
@@ -31,7 +36,8 @@ const Effect = () => {
             Email address
           </label>
           <input
-            type="text"
+            value={id}
+            onChange={(e) => setId(e.target.value)}
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
