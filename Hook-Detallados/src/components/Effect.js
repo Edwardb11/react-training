@@ -4,12 +4,11 @@ const Effect = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const getUsers = async () => {
-      const res = await fetch("https://jsonplaceholder.typicode.com/users");
-      const data = await res.json();
-      setUsers(data);
-    };
-    getUsers();
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => {
+        setUsers(data);
+      });
   }, []);
   console.log(users);
   console.log(users);
