@@ -7,29 +7,33 @@ const Cards = () => {
 
   const peticion = useCallback(async () => {
     const key = "client_id=TlD4jwNraHpTsPCwcSYEHyYJNNf2pSnBnq3mgDEjmkQ";
-    const route = `https://api.unsplash.com/photos/?${key}`;
+    let route = `https://api.unsplash.com/photos/?${key}`;
+
     if (input !== "") {
-      const route = `https://api.unsplash.com/search/photos?query=${encodeURI(
+      route = `https://api.unsplash.com/search/photos/?query=${encodeURI(
         input
       )}&${key}`;
     }
-    const res = fetch(route);
+
+    const res = await fetch(route);
 
     const data = await res.json();
-    // console.log(data);
+
     if (data.results) {
       setImages(data.results);
     } else {
       setImages(data);
     }
-  });
+  }, [input]);
 
   useEffect(() => {
     peticion();
   }, [peticion]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const text = e.target[0].value;
+
     setInput(text);
   };
 
