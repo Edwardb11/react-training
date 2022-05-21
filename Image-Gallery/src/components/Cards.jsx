@@ -46,9 +46,15 @@ const Cards = () => {
         </label>
       </form>
       <hr />
-      {images.map((img) => {
-        return <Card key={img.id} img={img.urls.regular} />;
-      })}
+      <div className="row">
+        {images.map((img) => {
+          return (
+            <div key={img.id} className="col">
+              <Card img={img.urls.regular} />
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 };
