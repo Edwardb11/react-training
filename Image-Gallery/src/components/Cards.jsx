@@ -1,33 +1,47 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Card from "./Card";
 
 const Cards = () => {
   const [images, setImages] = useState([]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
-  const peticion = async () => {
-    const res = await fetch(
-      "https://api.unsplash.com/photos/?client_id=TlD4jwNraHpTsPCwcSYEHyYJNNf2pSnBnq3mgDEjmkQ"
-    );
+  const peticion = useCallback(async () => {
+    const key = "client_id=TlD4jwNraHpTsPCwcSYEHyYJNNf2pSnBnq3mgDEjmkQ";
+    const route = `https://api.unsplash.com/photos/?${key}`;
+    if (input !== "") {
+      const route = `https://api.unsplash.com/search/photos?query=${encodeURI(
+        input
+      )}&${key}`;
+    }
+    const res = fetch(route);
+
     const data = await res.json();
     // console.log(data);
-    setImages(data);
-  };
+    if (data.results) {
+      setImages(data.results);
+    } else {
+      setImages(data);
+    }
+  });
+
   useEffect(() => {
     peticion();
-  });
-const handleSubmit =(e)=>{
-  e.preventDefault()
-const text =e.target[0].value;
-setInput(text)
-}
+  }, [peticion]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const text = e.target[0].value;
+    setInput(text);
+  };
 
   return (
     <>
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="busqueda"> Buscar <input type='text'  name='busqueda'/></label>
-    </form>
-    <hr/>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="busqueda">
+          {" "}
+          Buscar <input type="text" name="busqueda" />
+        </label>
+      </form>
+      <hr />
       {images.map((img) => {
         return <Card key={img.id} img={img.urls.regular} />;
       })}
