@@ -40,10 +40,13 @@ const Cards = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="busqueda">
+        <label className="w-75">
           {" "}
-          Buscar <input type="text" name="busqueda" />
+          Buscar: <input className="w-100" type="text" name="inputText" />{" "}
         </label>
+        <button type="submit" className="btn btn-success m-2">
+          <span className="material-icons">search</span>
+        </button>
       </form>
       <hr />
       <div className="row">
