@@ -1,7 +1,11 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    navigate("/login");
+  };
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info">
       <div className="container-fluid">
@@ -49,7 +53,9 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="d-flex">
-            <button className="btn btn-danger">Logout</button>
+            <button className="btn btn-danger" onClick={handleLogout}>
+              Logout
+            </button>
           </div>
         </div>
       </div>
