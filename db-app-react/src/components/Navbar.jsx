@@ -1,42 +1,56 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg  bg-info ">
+    <nav className="navbar navbar-expand-lg navbar-light bg-info">
       <div className="container-fluid">
-        <h2 className="navbar-brand">
-          DB-APP
-        </h2>
+        <h1 className="navbar-brand">DB App</h1>
         <button
-          classNameName="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <NavLink
+                activeClassName="active"
+                className="nav-link"
+                aria-current="page"
+                to="/mans"
+              >
                 Mans
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink
+                activeClassName="active"
+                className="nav-link"
+                to="/womans"
+              >
                 Womans
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink
+                activeClassName="active"
+                className="nav-link"
+                to="/search"
+              >
                 Search
-              </a>
+              </NavLink>
             </li>
-            
           </ul>
+          <div className="d-flex">
+            <button className="btn btn-danger">Logout</button>
+          </div>
         </div>
       </div>
     </nav>
