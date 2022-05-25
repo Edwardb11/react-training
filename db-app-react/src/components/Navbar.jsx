@@ -1,11 +1,15 @@
 import React from "react";
-import { useNavigate, NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
+
+  const history = useHistory();
+
   const handleLogout = () => {
-    navigate("/login");
+
+    history.replace("/login");
   };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info">
       <div className="container-fluid">

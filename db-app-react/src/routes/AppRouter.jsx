@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import {  Route, Switch } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import ManScreen from "../pages/ManScreen";
 import SearchScreen from "../pages/SearchScreen";
@@ -9,11 +9,11 @@ const AppRouter = () => {
   return (
     <>
     <Navbar/>
-      <Routes>
-        <Route path="/mans" element={<ManScreen />} />
-        <Route path="/womans" element={<WomanScreen />} />
-        <Route path="/search" element={<SearchScreen />} />
-      </Routes>
+      <Switch>
+        <Route path="/mans" component={ManScreen} />
+        <Route path="/womans" component={WomanScreen } />
+        <Route path="/search" component={SearchScreen} />
+      </Switch>
     </>
   );
 };
