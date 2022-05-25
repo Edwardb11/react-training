@@ -1,8 +1,9 @@
 import React from 'react'
+import LoginRouter from './routes/LoginRouter'
 
 const App = () => {
   return (
-    <h1 className=''>Hola mundo</h1>
+    <LoginRouter/>
   )
 }
 
