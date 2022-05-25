@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const LoginScreen = () => {
   return (
-    <div>LoginScreen</div>
-  )
-}
+    <div className="container mt-5 text-center">
+      <img src="/assets/animate.gif" alt="logo" className="img-fluid" />
+      <h1 className="my-3">Login Screen</h1>
+      <button className="btn btn-primary">Login </button>
+    </div>
+  );
+};
 
-export default LoginScreen
+export default LoginScreen;
