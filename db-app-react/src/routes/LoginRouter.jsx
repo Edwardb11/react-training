@@ -6,7 +6,7 @@ import AppRouter from "./AppRouter";
 const LoginRouter = () => {
   return (
     <Router>
-        <AppRouter/>
+      <AppRouter />
       <Routes>
         <Route exact path="/login" element={<LoginScreen />} />
       </Routes>
