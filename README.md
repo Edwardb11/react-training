@@ -1,8 +1,7 @@
-# Curso de reactjs
+### Gallery APP
+### DEMO
+ [Live](https://628ce3008ad16b1f80b67987--reliable-begonia-8e8823.netlify.app/)
 
-## Proyectos Realizados durante el curso
+ ## Authors
 
-#### Galeria de imaganes, PWA  [LIVE](https://imagen-gallery-ebd.netlify.app/)
-
-#### Context API  [LIVE](https://context-app-ebd.netlify.app/)
-
+- [@Edwardb11](https://www.github.com/Edwardb11)
