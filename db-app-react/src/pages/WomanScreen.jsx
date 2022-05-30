@@ -2,11 +2,11 @@ import React from "react";
 import Card from "../components/Card";
 import { Characters } from "../models/Characters";
 
-const ManScreen = () => {
+const WomanScreen = () => {
   const womans = Characters.filter((character) => character.type === "m");
   return (
     <div className="container mt-3">
-      <h1>Man</h1>
+      <h1>Woman</h1>
       <hr />
       <div className="row">
         {womans.map((woman) => (
@@ -17,4 +17,4 @@ const ManScreen = () => {
   );
 };
 
-export default ManScreen;
+export default WomanScreen;
