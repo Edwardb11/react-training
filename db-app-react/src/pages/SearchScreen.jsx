@@ -1,7 +1,14 @@
 import React, { useState } from "react";
-
+import { useLocation } from "react-router";
+import queryString from "query-string";
 const SearchScreen = ({ history }) => {
-  const [inputValue, setInputValue] = useState();
+  const location = useLocation();
+  // console.log(location.search)
+
+  const { query = " " } = queryString.parse(location.search);
+  // console.log(query)
+  
+  const [inputValue, setInputValue] = useState(query);
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -12,7 +19,7 @@ const SearchScreen = ({ history }) => {
     e.preventDefault();
     history.push(`?query=${inputValue}`);
   };
-  
+
   return (
     <div className="container">
       <div className="row">
