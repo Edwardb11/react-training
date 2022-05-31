@@ -1,5 +1,5 @@
 import React from "react";
-import {  Route, Switch } from "react-router-dom";
+import {  Redirect, Route, Switch } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import CharacterScreen from "../pages/CharacterScreen";
 import ManScreen from "../pages/ManScreen";
@@ -15,6 +15,7 @@ const AppRouter = () => {
         <Route path="/womans" component={WomanScreen } />
         <Route path="/search" component={SearchScreen} />
         <Route path="/character/:id" component={CharacterScreen}/>
+        <Redirect to="mans" />
       </Switch>
     </>
   );
