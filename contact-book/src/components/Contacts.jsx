@@ -1,4 +1,5 @@
 import React from "react";
+import FormsAdd from "./FormsAdd";
 import TableContacts from "./TableContacts";
 
 const Contacts = () => {
@@ -16,6 +17,7 @@ const Contacts = () => {
   ];
   return (
     <div className="container mt-3">
+      <FormsAdd />
       <TableContacts contacts={contacts} />
     </div>
   );
