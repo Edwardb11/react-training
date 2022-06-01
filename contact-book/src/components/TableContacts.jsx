@@ -11,6 +11,18 @@ const TableContacts = ({ contacts }) => {
           <th>Actions</th>
         </tr>
       </thead>
+      <tbody>
+        {contacts.map((contact) => (
+          <tr key={contact.id}>
+            <td>{contact.id}</td>
+            <td>{contact.name}</td>
+            <td>{contact.phone}</td>
+            <td>
+              <button className="btn btn-danger">Delete</button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 };
