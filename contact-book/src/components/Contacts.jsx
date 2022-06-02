@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useReducer } from "react";
+import { ContactReducer } from "../reducers/ContactReducer";
 import FormsAdd from "./FormsAdd";
 import TableContacts from "./TableContacts";
 
@@ -14,11 +15,17 @@ const Contacts = () => {
       name: "Pedro",
       phone: "87654321",
     },
+    {
+      id: 2,
+      name: "Pedro",
+      phone: "87654321",
+    },
   ];
+  const [state,dispatch]  =useReducer(ContactReducer,contacts)
   return (
     <div className="container mt-3">
       <FormsAdd />
-      <TableContacts contacts={contacts} />
+      <TableContacts contacts={state} />
     </div>
   );
 };
