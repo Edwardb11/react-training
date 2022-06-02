@@ -6,17 +6,17 @@ import TableContacts from "./TableContacts";
 const Contacts = () => {
   const contacts = [
     {
-      id: 1,
+      id: "ahdhkas",
       name: "Juan",
       phone: "12345678",
     },
     {
-      id: 2,
+      id: "ajdhajc",
       name: "Pedro",
       phone: "87654321",
     },
     {
-      id: 3,
+      id: "ajdhsjak",
       name: "Pedro",
       phone: "87654321",
     },
