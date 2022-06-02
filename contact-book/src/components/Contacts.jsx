@@ -21,10 +21,12 @@ const Contacts = () => {
       phone: "87654321",
     },
   ];
-  const [state,dispatch]  =useReducer(ContactReducer,contacts)
+
+  const [state, dispatch] = useReducer(ContactReducer, contacts);
+
   return (
     <div className="container mt-3">
-      <FormsAdd />
+      <FormsAdd dispatch={dispatch} />
       <TableContacts contacts={state} />
     </div>
   );
