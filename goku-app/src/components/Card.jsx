@@ -5,7 +5,7 @@ const Card = ({name,description,type,id}) => {
     const path = `/assets/${type}-${id}.png`
   return (
     <div className='card m-3 col-12 col-md-4  ' style={{width:200}}>
-        <img src={path} alt={id} className='card-img-top'/>
+        <img loading='lazy'  src={path} alt={id} className='card-img-top'/>
         <div className='card-body'>
             <h5 className='card-title'>{name}</h5>
             <p className='card-body'>
