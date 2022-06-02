@@ -12,16 +12,22 @@ const TableContacts = ({ contacts }) => {
         </tr>
       </thead>
       <tbody>
-        {contacts.map((contact) => (
-          <tr key={contact.id}>
-            <td>{contact.id}</td>
-            <td>{contact.name}</td>
-            <td>{contact.phone}</td>
-            <td>
-              <button className="btn btn-danger">Delete</button>
-            </td>
-          </tr>
-        ))}
+      {contacts.map((contact) => {
+          return (
+            <tr key={contact.id}>
+              <th>{contact.id }</th>
+              <td>{contact.nombre}</td>
+              <td>{contact.numero}</td>
+              <td>
+                <button
+                  className="btn btn-danger"
+                >
+                  Eliminar
+                </button>
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
