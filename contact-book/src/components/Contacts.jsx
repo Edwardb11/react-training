@@ -16,7 +16,7 @@ const Contacts = () => {
       phone: "87654321",
     },
     {
-      id: 2,
+      id: 3,
       name: "Pedro",
       phone: "87654321",
     },
@@ -27,7 +27,7 @@ const Contacts = () => {
   return (
     <div className="container mt-3">
       <FormsAdd dispatch={dispatch} />
-      <TableContacts contacts={state} />
+      <TableContacts contacts={state} dispatch={dispatch} />
     </div>
   );
 };
