@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import queryString from "query-string";
 import { Characters } from "../models/Characters";
 import Card from "../components/Card";
-const SearchScreen = ({ history }) => {
+
+const SearchScreen = () => {
   const location = useLocation();
-  // console.log(location.search)
+  const navigate = useNavigate();
 
-  const { query = " " } = queryString.parse(location.search);
-  // console.log(query)
+  const { q = "" } = queryString.parse(location.search);
 
-  const [inputValue, setInputValue] = useState(query);
+  const [inputValue, setInputValue] = useState(q);
   const [characters, setCharacters] = useState([]);
+
   const handleChange = (e) => {
     const value = e.target.value;
     setInputValue(value);
@@ -19,7 +20,7 @@ const SearchScreen = ({ history }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push(`?query=${inputValue}`);
+    navigate(`?q=${inputValue}`);
   };
 
   const getCharacters = () => {
@@ -28,24 +29,27 @@ const SearchScreen = ({ history }) => {
       const newValue = Characters.filter((character) =>
         character.name.toLocaleLowerCase().includes(value)
       );
+
       setCharacters(newValue);
     } else {
       setCharacters([]);
     }
   };
+
   useEffect(() => {
     getCharacters();
-    // console.log(characters)
-  }, [query]);
+  }, [q]);
 
   return (
     <div className="container">
+      <h1>Search Screen</h1>
+      <hr />
       <div className="row">
         <div className="col-6">
           <h2>Search</h2>
           <form onSubmit={handleSubmit}>
             <label className="form-label w-100">
-              Character
+              Character:{" "}
               <input
                 placeholder="Name Character"
                 type="text"
@@ -55,18 +59,19 @@ const SearchScreen = ({ history }) => {
                 onChange={handleChange}
               />
             </label>
-            <button type="submit" className="btn btn-success w-100">
+            <button type="submit" className="btn btn-info w-100">
               Search
             </button>
           </form>
         </div>
         <div className="col-6">
-          <h2> Results {characters.length}</h2>
+          <h2>Results: {characters.length}</h2>
           {characters.length === 0 && (
-            <div className="alert alert-warning text-center ">
-              Please Search a characters
+            <div className="alert alert-warning text-center">
+              Please Search a Character
             </div>
           )}
+
           {characters.map((character) => (
             <Card key={character.id} {...character} />
           ))}

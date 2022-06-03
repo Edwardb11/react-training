@@ -1,15 +1,12 @@
-import React from "react";
-import { Redirect, Route } from "react-router-dom";
+import React, { useContext } from "react";
+import { Navigate } from "react-router";
 
-const PublicRouter = ({ auth, component: Component, ...rest }) => {
-  return (
-    <Route
-      {...rest}
-      component={(props) =>
-        !auth.log ? <Component {...props} /> : <Redirect to="/" />
-      }
-    />
-  );
+import { AuthContext } from "../context/AuthContext";
+
+const PublicRouter = ({ children }) => {
+  const { log } = useContext(AuthContext);
+
+  return !log.log ? children : <Navigate to="/mans" />;
 };
 
 export default PublicRouter;

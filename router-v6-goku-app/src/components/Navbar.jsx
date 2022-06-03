@@ -7,32 +7,35 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const { dispatch } = useContext(AuthContext);
+
   const handleLogout = () => {
     dispatch({ type: authTypes.logout });
+
     navigate("/login");
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-info">
       <div className="container-fluid">
-        <h1 className="navbar-brand">DB App</h1>
+        <h2 className="navbar-brand">DB App</h2>
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon" />
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <NavLink
-                activeClassName="active"
-                className="nav-link"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active text-white" : ""}`
+                }
                 aria-current="page"
                 to="/mans"
               >
@@ -41,8 +44,10 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                activeClassName="active"
-                className="nav-link"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active text-white" : ""}`
+                }
+                aria-current="page"
                 to="/womans"
               >
                 Womans
@@ -50,8 +55,10 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                activeClassName="active"
-                className="nav-link"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active text-white" : ""}`
+                }
+                aria-current="page"
                 to="/search"
               >
                 Search
