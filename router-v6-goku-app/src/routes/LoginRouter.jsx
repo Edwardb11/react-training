@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 
 import LoginScreen from "../pages/LoginScreen";
@@ -12,10 +12,10 @@ const LoginRouter = () => {
   const { log } = useContext(AuthContext);
   return (
     <Router>
-      <Switch>
+      <Routes>
         <PublicRouter path="/login" auth={log} component={LoginScreen} />
         <PrivateRouter path="/" auth={log} component={AppRouter} />
-      </Switch>
+      </Routes>
     </Router>
   );
 };

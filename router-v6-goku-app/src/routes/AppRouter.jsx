@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Redirect, Route, Routes } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
 // import CharacterScreen from "../pages/CharacterScreen";
@@ -25,13 +25,13 @@ const AppRouter = () => {
           </>
         }
       >
-        <Switch>
+        <Routes>
           <Route path="/mans" component={ManScreen} />
           <Route path="/womans" component={WomanScreen} />
           <Route path="/search" component={SearchScreen} />
           <Route path="/character/:id" component={CharacterScreen} />
-          <Redirect to="mans" />
-        </Switch>
+          {/* <Redirect to="mans" /> */}
+        </Routes>
       </Suspense>
     </>
   );
