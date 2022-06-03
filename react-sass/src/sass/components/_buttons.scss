@@ -1,0 +1,32 @@
+.btn {
+    background-color: $white;
+    color: $dark;
+    font-size: 3rem;
+    border-radius: 2px;
+
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($color: $white, $amount: 20);
+    }
+
+
+    &.btn-primary {
+        background-color: $primary;
+        color: $white;
+
+        &:hover {
+            background-color: darken($color: $primary, $amount: 10);
+        }
+    }
+
+    &.btn-secondary {
+        background-color: darken($color: $secondary, $amount: 10);
+        color: $white;
+
+        &:hover {
+            background-color: lighten($color: $secondary, $amount: 50);
+            color:$dark
+            }
+    }
+}
