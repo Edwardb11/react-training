@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render ,screen} from "@testing-library/react";
 import Counter from "./Counter";
 
 describe("<Counter/>", () => {
@@ -9,8 +9,16 @@ describe("<Counter/>", () => {
     expect(wrapper.getByText("Counter: 0").tagName).toBe("H2");
   });
 
-  it("Prueba que 1 + 1 es 2 no es 3", () => {
-    expect(1 + 1).toBe(2);
-    expect(1 + 1).not.toBe(3);
-  });
+  it("verificar que el clik +1 aumente correctamente",()=>{
+    render(<Counter />);
+
+    expect(screen.getByText("+1").tagName);
+    console.log(screen.getByText("+1").tagName)
+
+  })
+
+//   it("Prueba que 1 + 1 es 2 no es 3", () => {
+//     expect(1 + 1).toBe(2);
+//     expect(1 + 1).not.toBe(3);
+//   });
 });
