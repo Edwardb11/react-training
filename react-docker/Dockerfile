@@ -15,12 +15,12 @@ RUN npm install
 # Primer punto copio todo y con el segundo lo llevo a mi directorio de trabajo
 COPY . .
 
-RUN npm build 
+RUN npm run build 
 
 
-FROM nginix:1.21.6-alpine as production-stage
+FROM nginx:1.21.6-alpine as production-stage
 
-COPY --from=build-stage /app/dist /usr/share/nginix/html
+COPY --from=build-stage /app/dist /usr/share/nginx/html
 EXPOSE 80
 
-CMD [ "nginix","-g", "daemon off;" ]
+CMD [ "nginx","-g", "daemon off;" ]
