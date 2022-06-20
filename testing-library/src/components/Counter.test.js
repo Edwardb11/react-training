@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import Counter from "./Counter";
 
 describe("<Counter", () => {
@@ -17,6 +18,7 @@ describe("<Counter", () => {
   it("Verificar que el click -1 disminuya correctamente", () => {
     render(<Counter />);
     const btn = screen.getByLabelText("disminuir");
-
+    userEvent.click(btn);
+    expect(screen.getByRole("counter").textContent).toContain("Counter: -1");
   });
 });
