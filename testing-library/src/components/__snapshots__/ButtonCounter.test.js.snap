@@ -7,11 +7,3 @@ exports[`<ButtonCounter/> Cree un boton correctamente  Snapshot 1`] = `
   3
 </button>
 `;
-
-exports[`<ButtonCounter/> Cree un boton correctamente 1`] = `
-<button
-  aria-label="aumentar"
->
-  3
-</button>
-`;

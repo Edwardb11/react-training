@@ -3,9 +3,9 @@ import Counter from "./components/Counter";
 
 const App = () => {
   return (
-    <>
+    <div role="app">
       <Counter />
-    </>
+    </div>
   );
 };
 

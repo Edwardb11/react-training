@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<div
+  role="app"
+>
+  <h2
+    role="counter"
+  >
+    Counter:
+    0
+  </h2>
+  <button
+    aria-label="aumentar"
+  >
+    1
+  </button>
+  <button
+    aria-label="reset"
+  >
+    Reset
+  </button>
+  <button
+    aria-label="disminuir"
+  >
+    -1
+  </button>
+</div>
+`;
