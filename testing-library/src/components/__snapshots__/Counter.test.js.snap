@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter/> Primer Snapshot 1`] = `
+<h2
+  role="counter"
+>
+  Counter:
+  0
+</h2>
+`;

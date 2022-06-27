@@ -5,9 +5,16 @@ describe("<ButtonCounter/>", () => {
   // simulacion => Mock scaneo
   const action = jest.fn();
 
-  it("Cree un boton correctamente", () => {
+  beforeEach(() => {
     render(<ButtonCounter name="aumentar" value={3} action={action} />);
+  });
+  it("Cree un boton correctamente", () => {
     // Espero que esta validacion exista en el documento
     expect(screen.getByLabelText("aumentar")).toBeInTheDocument();
+  });
+
+  it("Cree un boton correctamente  Snapshot", () => {
+    // Espero que esta validacion exista en el documento
+    expect(screen.getByLabelText("aumentar")).toMatchSnapshot();
   });
 });

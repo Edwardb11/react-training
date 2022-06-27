@@ -13,6 +13,11 @@ describe("<Counter/>", () => {
   //   userEvent.click(screen.getByLabelText("reset"));
   // })
 
+  // Snapshot
+  it("Primer Snapshot", () => {
+    expect(screen.getByRole("counter")).toMatchSnapshot();
+  });
+
   it("Prueba de que el titulo y estado se renderizan correctamente", () => {
     expect(screen.getByText("Counter:0").tagName).toBe("H2");
   });

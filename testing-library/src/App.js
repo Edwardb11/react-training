@@ -1,10 +1,12 @@
-import React from 'react'
-import Counter from './components/Counter'
+import React from "react";
+import Counter from "./components/Counter";
 
 const App = () => {
   return (
-    <div><Counter/></div>
-  )
-}
+    <>
+      <Counter />
+    </>
+  );
+};
 
-export default App
+export default App;
