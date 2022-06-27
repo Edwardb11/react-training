@@ -8,7 +8,9 @@ export const useCounter = () => {
     const handleModifyCounter = (value =1) => {
       setCounter(counter + value);
     };
-    return {counter,handleModifyCounter}
+    const handleReset = () => {
+      setCounter(0);
+    };
+    return {counter,handleModifyCounter, handleReset}
   
  }
- 

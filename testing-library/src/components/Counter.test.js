@@ -36,4 +36,22 @@ describe("<Counter", () => {
 
     expect(screen.getByRole("counter").textContent).toContain("Counter:2");
   });
+
+  it("Reset button", () => {
+    render(<Counter />);
+    const btnAdd = screen.getByLabelText("aumentar");
+
+    userEvent.click(btnAdd);
+    userEvent.click(btnAdd);
+    userEvent.click(btnAdd);
+    userEvent.click(btnAdd);
+    userEvent.click(btnAdd);
+    userEvent.click(btnAdd);
+
+    // button reset
+    userEvent.click(screen.getByLabelText("reset"));
+
+
+    expect(screen.getByRole("counter").textContent).toContain("Counter:0");
+  });
 });
