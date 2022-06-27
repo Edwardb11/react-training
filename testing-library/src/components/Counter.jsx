@@ -1,18 +1,17 @@
 import React from "react";
 import { useCounter } from "../hooks/useCounter";
+import ButtonCounter from "./ButtonCounter";
 
 const Counter = () => {
   const { counter, handleModifyCounter,handleReset } = useCounter();
   return (
     <>
       <h2 role="counter">Counter:{counter}</h2>
-      <button aria-label="aumentar" onClick={() => handleModifyCounter()}>
-        +1
-      </button>
+
+      <ButtonCounter name="aumentar" action={handleModifyCounter} />
       <button aria-label="reset" onClick={handleReset} >Reset</button>
-      <button aria-label="disminuir" onClick={() => handleModifyCounter(-1)}>
-        -1
-      </button>
+      <ButtonCounter name="disminuir" action={handleModifyCounter} value={-1} />
+ 
     </>
   );
 };
