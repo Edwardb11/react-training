@@ -1,21 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
+import { useCounter } from "../hooks/useCounter";
 
 const Counter = () => {
-  const [counter, setCounter] = useState(0);
-
-  const handleAdd = () => {
-    setCounter(Counter + 1);
-  };
-  const handleDis = () => {
-    setCounter(Counter - 1);
-  };
+  const { counter, handleModifyCounter } = useCounter();
   return (
     <>
       <h2 role="counter">Counter:{counter}</h2>
-      <button   aria-label="aumentar" onClick={handleAdd}>
+      <button aria-label="aumentar" onClick={() => handleModifyCounter()}>
         +1
       </button>
-      <button  aria-label="disminuir" onClick={handleDis}>
+      <button aria-label="disminuir" onClick={() => handleModifyCounter(-1)}>
         -1
       </button>
     </>

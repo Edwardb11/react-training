@@ -15,11 +15,10 @@ describe("<Counter", () => {
     expect(screen.getByRole("counter").textContent).toContain("Counter:1");
   });
 
-  it("Verificar que el click -1 disminuya correctamente",()=>{
-    render(<Counter/>);
+  it("Verificar que el click -1 disminuya correctamente", () => {
+    render(<Counter />);
     userEvent.click(screen.getByLabelText("disminuir"));
     expect(screen.getByRole("counter").textContent).toContain("Counter:-1");
-
   });
 
   it("Simular que alguien esta usando la App", () => {
@@ -34,7 +33,6 @@ describe("<Counter", () => {
 
     userEvent.click(btnDis);
     userEvent.click(btnDis);
-
 
     expect(screen.getByRole("counter").textContent).toContain("Counter:2");
   });
