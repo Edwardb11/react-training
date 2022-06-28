@@ -13,7 +13,7 @@ const Cards = () => {
 
       {loading && <Loading />}
 
-      <div className="row">
+      <div aria-label="imagenes" className="row">
         {images.map((img) => {
           return (
             <div key={img.id} className="col">

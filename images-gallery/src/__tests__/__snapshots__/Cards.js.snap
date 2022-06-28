@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cards/> Snapshot card 1`] = `
+Array [
+  <div
+    aria-label="img"
+  >
+    <div
+      class="card m-2"
+      style="width: 18rem;"
+    >
+      <img
+        alt="imagen.png"
+        class="card-img-top"
+        src="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMzA0MTd8MXwxfGFsbHwxfHx8fHx8Mnx8MTY1NjQzMDI3NA&ixlib=rb-1.2.1&q=80&w=1080"
+      />
+    </div>
+  </div>,
+  <div
+    aria-label="img"
+  >
+    <div
+      class="card m-2"
+      style="width: 18rem;"
+    >
+      <img
+        alt="imagen.png"
+        class="card-img-top"
+        src="https://images.unsplash.com/photo-1656411552768-f43e07d43596?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMzA0MTd8MHwxfGFsbHwyfHx8fHx8Mnx8MTY1NjQzMDI3NA&ixlib=rb-1.2.1&q=80&w=1080"
+      />
+    </div>
+  </div>,
+  <div
+    aria-label="img"
+  >
+    <div
+      class="card m-2"
+      style="width: 18rem;"
+    >
+      <img
+        alt="imagen.png"
+        class="card-img-top"
+        src="https://images.unsplash.com/photo-1656231877753-1658b926365f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMzA0MTd8MHwxfGFsbHwzfHx8fHx8Mnx8MTY1NjQzMDI3NA&ixlib=rb-1.2.1&q=80&w=1080"
+      />
+    </div>
+  </div>,
+  <div
+    aria-label="img"
+  >
+    <div
+      class="card m-2"
+      style="width: 18rem;"
+    >
+      <img
+        alt="imagen.png"
+        class="card-img-top"
+        src="https://images.unsplash.com/photo-1656410212809-be4abff5af13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMzA0MTd8MHwxfGFsbHw0fHx8fHx8Mnx8MTY1NjQzMDI3NA&ixlib=rb-1.2.1&q=80&w=1080"
+      />
+    </div>
+  </div>,
+  <div
+    aria-label="img"
+  >
+    <div
+      class="card m-2"
+      style="width: 18rem;"
+    >
+      <img
+        alt="imagen.png"
+        class="card-img-top"
+        src="https://images.unsplash.com/photo-1655666581156-ff7c1735e333?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMzA0MTd8MHwxfGFsbHw1fHx8fHx8Mnx8MTY1NjQzMDI3NA&ixlib=rb-1.2.1&q=80&w=1080"
+      />
+    </div>
+  </div>,
+  <div
+    aria-label="img"
+  >
+    <div
+      class="card m-2"
+      style="width: 18rem;"
+    >
+      <img
+        alt="imagen.png"
+        class="card-img-top"
+        src="https://images.unsplash.com/photo-1648737153811-69a6d8c528bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMzA0MTd8MXwxfGFsbHw2fHx8fHx8Mnx8MTY1NjQzMDI3NA&ixlib=rb-1.2.1&q=80&w=1080"
+      />
+    </div>
+  </div>,
+  <div
+    aria-label="img"
+  >
+    <div
+      class="card m-2"
+      style="width: 18rem;"
+    >
+      <img
+        alt="imagen.png"
+        class="card-img-top"
+        src="https://images.unsplash.com/photo-1656414896156-bb1339254229?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMzA0MTd8MHwxfGFsbHw3fHx8fHx8Mnx8MTY1NjQzMDI3NA&ixlib=rb-1.2.1&q=80&w=1080"
+      />
+    </div>
+  </div>,
+  <div
+    aria-label="img"
+  >
+    <div
+      class="card m-2"
+      style="width: 18rem;"
+    >
+      <img
+        alt="imagen.png"
+        class="card-img-top"
+        src="https://images.unsplash.com/photo-1656231900374-a7d03b7d61d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMzA0MTd8MHwxfGFsbHw4fHx8fHx8Mnx8MTY1NjQzMDI3NA&ixlib=rb-1.2.1&q=80&w=1080"
+      />
+    </div>
+  </div>,
+  <div
+    aria-label="img"
+  >
+    <div
+      class="card m-2"
+      style="width: 18rem;"
+    >
+      <img
+        alt="imagen.png"
+        class="card-img-top"
+        src="https://images.unsplash.com/photo-1656409617323-9715d7720c77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMzA0MTd8MHwxfGFsbHw5fHx8fHx8Mnx8MTY1NjQzMDI3NA&ixlib=rb-1.2.1&q=80&w=1080"
+      />
+    </div>
+  </div>,
+  <div
+    aria-label="img"
+  >
+    <div
+      class="card m-2"
+      style="width: 18rem;"
+    >
+      <img
+        alt="imagen.png"
+        class="card-img-top"
+        src="https://images.unsplash.com/photo-1656352504384-951c370b3a93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMzA0MTd8MHwxfGFsbHwxMHx8fHx8fDJ8fDE2NTY0MzAyNzQ&ixlib=rb-1.2.1&q=80&w=1080"
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`<Cards/> Snapshot cards 1`] = `
+<div
+  aria-label="imagenes"
+  class="row"
+/>
+`;

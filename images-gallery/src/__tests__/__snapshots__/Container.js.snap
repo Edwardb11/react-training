@@ -44,6 +44,7 @@ exports[`<Container/> Snapshot principal 1`] = `
       </span>
     </div>
     <div
+      aria-label="imagenes"
       class="row"
     />
   </div>

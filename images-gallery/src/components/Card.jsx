@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Card = ({ img }) => {
   return (
-    <div>
+    <div aria-label="img">
       <div
         className="card m-2"
         style={{

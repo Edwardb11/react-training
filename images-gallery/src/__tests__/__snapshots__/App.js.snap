@@ -60,6 +60,7 @@ exports[`Snapshot del app 1`] = `
         </span>
       </div>
       <div
+        aria-label="imagenes"
         class="row"
       />
     </div>
