@@ -18,6 +18,7 @@ exports[`Snapshot del app 1`] = `
     </div>
   </nav>
   <div
+    aria-label="container"
     class="container border"
   >
     <div
