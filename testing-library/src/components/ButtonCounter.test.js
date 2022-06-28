@@ -12,6 +12,10 @@ describe("<ButtonCounter/>", () => {
     // Espero que esta validacion exista en el documento
     expect(screen.getByLabelText("aumentar")).toBeInTheDocument();
   });
+  // it("Cree un boton correctamente sin mandar value", () => {
+  //   render(<ButtonCounter name="aumentar"  action={action} />);
+  //   expect(screen.getByLabelText("aumentar")).toBeInTheDocument();
+  // });
 
   it("Cree un boton correctamente  Snapshot", () => {
     // Espero que esta validacion exista en el documento
