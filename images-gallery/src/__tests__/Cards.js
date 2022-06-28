@@ -11,6 +11,7 @@ describe("<Cards/>", () => {
     // console.log(await screen.findAllByLabelText("img"))
     const res = await screen.findAllByLabelText("img");
 
-    expect(res).toMatchSnapshot();
+    // expect(res).toMatchSnapshot();
+    expect(res).toHaveLength(10)
   });
 });
