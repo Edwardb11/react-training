@@ -11,3 +11,11 @@ Content-Type: application/json
     "password":"edward11",
     "confPassword":"edward11"
 }
+
+###
+POST  http://localhost:5000/login
+Content-Type: application/json
+{
+    "email":"edward@hotmail.com",
+    "password":"edward11",
+}

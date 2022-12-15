@@ -1,10 +1,12 @@
 import express from "express";
+import dotenv from "dotenv";
 import db from "./config/Database.js";
 import Users from "./models/UserModel.js";
 import router from "./routes/index.js";
 
 const app = express();
 const PORT = 5000;
+dotenv.config();
 try {
   await db.authenticate();
   console.log("Conected");

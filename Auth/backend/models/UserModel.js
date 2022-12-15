@@ -13,7 +13,7 @@ const Users = db.define("users", {
   password: {
     type: DataTypes.STRING,
   },
-  refres_token: {
+  refresh_token: {
     type: DataTypes.TEXT,
   },
 });
