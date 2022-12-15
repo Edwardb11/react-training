@@ -1,0 +1,13 @@
+GET http://localhost:5000/users
+
+
+###
+POST  http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name":"Edward Brito",
+    "email":"edward@hotmail.com",
+    "password":"edward11",
+    "confPassword":"edward11"
+}
