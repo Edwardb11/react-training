@@ -8,14 +8,15 @@ Content-Type: application/json
 {
     "name":"Edward Brito",
     "email":"edward@hotmail.com",
-    "password":"edward11",
-    "confPassword":"edward11"
+    "password":"12345",
+    "confPassword":"12345"
 }
 
 ###
 POST  http://localhost:5000/login
 Content-Type: application/json
-{
+
+{   
     "email":"edward@hotmail.com",
     "password":"edward11",
 }

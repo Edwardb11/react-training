@@ -1,6 +1,6 @@
 import Users from "../models/UserModel.js";
 import bcrypt from "bcrypt";
-import Jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 
 export const getUsers = async (req, res) => {
   try {
@@ -19,7 +19,6 @@ export const Register = async (req, res) => {
   const salt = await bcrypt.genSalt();
   const hashPassword = await bcrypt.hash(password, salt);
   try {
-    console.log(hashPassword);
     await Users.create({
       name: name,
       email: email,
@@ -39,20 +38,24 @@ export const Login = async (req, res) => {
         email: email,
       },
     });
+    // Verificar si el arreglo user tiene al menos un elemento
+    if (user.length === 0) {
+      return res.status(404).json({ msg: "Email no encontrado" });
+    }
     const match = await bcrypt.compare(password, user[0].password);
-    if (!match) res.status(400).json({ msg: "Contraseña incorrecta" });
+    if (!match) return res.status(400).json({ msg: "Contraseña incorrecta" });
     // JWT
     const userId = user[0].id;
     const name = user[0].name;
     const emails = user[0].email;
-    const accessToken = Jwt.sign(
+    const accessToken = jwt.sign(
       { userId, name, emails },
       process.env.ACCESS_TOKEN_SECRET,
       {
         expiresIn: "20s",
       }
     );
-    const refreshToken = Jwt.sign(
+    const refreshToken = jwt.sign(
       { userId, name, emails },
       process.env.REFRESH_TOKEN_SECRET,
       {
