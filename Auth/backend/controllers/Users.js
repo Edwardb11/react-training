@@ -37,14 +37,10 @@ export const Login = async (req, res) => {
     const { email, password } = req.body;
     const user = await Users.findAll({
       where: {
-        email: email,
+        email: req.body.email,
       },
     });
-    // Verificar si el arreglo user tiene al menos un elemento
-    if (user.length === 0) {
-      return res.status(404).json({ msg: "Email no encontrado" });
-    }
-    const match = await bcrypt.compare(password, user[0].password);
+    const match = await bcrypt.compare(req.body.password, user[0].password);
     if (!match) return res.status(400).json({ msg: "Contraseña incorrecta" });
     // JWT
     const userId = user[0].id;
@@ -83,4 +79,27 @@ export const Login = async (req, res) => {
   } catch (error) {
     res.status(404).json({ msg: "Email no encontrado" });
   }
+};
+export const Logout = async (req, res) => {
+  const refreshToken = req.cookies.refreshToken;
+  if (!refreshToken) {
+    return res.sendStatus(204);
+  }
+  const user = await Users.findAll({
+    where: {
+      refresh_token: refreshToken,
+    },
+  });
+  if (!user[0]) {
+    return res.sendStatus(204);
+  }
+  const userId = user[0].id;
+  await Users.update(
+    { refresh_token: null },
+    {
+      where: { id: userId },
+    }
+  );
+  res.clearCookie('refreshToken')
+  return res.sendStatus(200)
 };

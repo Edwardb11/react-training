@@ -1,7 +1,6 @@
 GET http://localhost:5000/users
 Authorization: Bearer
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsIm5hbWUiOiJFZHdhcmQgQnJpdG8iLCJlbWFpbHMiOiJlZHdhcmRAaG90bWFpbC5jb20iLCJpYXQiOjE2NzEyMDE4NTcsImV4cCI6MTY3MTIwNTQ1N30.bnP5XuWhVxBda-BUNT4RBPGiRh1Hqp_3i81-4dwf-bw
-
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsIm5hbWUiOiJFZHdhcmQgQnJpdG8iLCJlbWFpbHMiOiJtYW51ZWxAaG90bWFpbC5jb20iLCJpYXQiOjE2NzEyMDM4NTUsImV4cCI6MTY3MTIwNzQ1NX0.XQouIjQNwmky8zpwMgdI09Pcpa5qWyU9TffLoL66JOI
 
 ###
 POST  http://localhost:5000/register
@@ -9,7 +8,7 @@ Content-Type: application/json
 
 {
     "name":"Edward Brito",
-    "email":"edward@hotmail.com",
+    "email":"manuel@hotmail.com",
     "password":"12345",
     "confPassword":"12345"
 }
@@ -22,3 +21,10 @@ Content-Type: application/json
     "email":"edward@hotmail.com",
     "password":"edward11",
 }
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE  http://localhost:5000/logout
+
