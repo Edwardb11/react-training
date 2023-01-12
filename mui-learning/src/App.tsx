@@ -4,6 +4,7 @@ import MUIButton from "./components/MUIButton";
 import MUITextField from "./components/MUITextField";
 import MUISelect from './components/MUISelect';
 import MUIRadioButton from "./components/MUIRadioButton";
+import MUICheckBox from "./components/MUICheckBox";
 
 function App() {
   return (
@@ -11,8 +12,10 @@ function App() {
       {/* <MyTypography />
       <MUIButton/>
       <MUITextField/> 
-      <MUISelect/> */}
-      <MUIRadioButton/>
+      <MUISelect/> 
+      <MUIRadioButton/>  */}
+
+      <MUICheckBox/>
     </div>
   );
 }
