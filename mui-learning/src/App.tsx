@@ -1,13 +1,14 @@
 import { useState } from "react";
-import "./App.css";
 import MyTypography from "./components/MyTypography";
 import MUIButton from "./components/MUIButton";
+import MUITextField from "./components/MUITextField";
 
 function App() {
   return (
     <div className="App">
-      <MyTypography />
-      <MUIButton/>
+      {/* <MyTypography />
+      <MUIButton/> */}
+      <MUITextField/>
     </div>
   );
 }

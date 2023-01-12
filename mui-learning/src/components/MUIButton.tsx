@@ -1,11 +1,13 @@
+import React from "react";
 import {
   Button,
   ButtonGroup,
   IconButton,
   Stack,
+  ToggleButton,
+  ToggleButtonGroup,
   Typography,
 } from "@mui/material";
-import React from "react";
 import SendIcon from "@mui/icons-material/Send";
 const MUIButton = () => {
   return (
@@ -71,6 +73,14 @@ const MUIButton = () => {
             <Button>right</Button>
           </ButtonGroup>
         </Stack>
+        <Stack direction="row">
+          <ToggleButtonGroup aria-label="text formating">
+            <ToggleButton value='bold'>  <SendIcon /> </ToggleButton>
+            <ToggleButton value='italoc'>            <SendIcon />
+</ToggleButton>
+            <ToggleButton value='underlined'>  <SendIcon /></ToggleButton>
+          </ToggleButtonGroup>
+      </Stack>
       </Stack>
     </>
   );
