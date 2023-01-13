@@ -11,6 +11,7 @@ import MUIAutocomplete from "./components/MUIAutocomplete";
 import MUIBox from "./components/MUIBox";
 import MUIGrid from "./components/MUIGrid";
 import MUIPaper from "./components/MUIPaper";
+import MUICard from "./components/MUICard";
 
 function App() {
   return (
@@ -26,8 +27,10 @@ function App() {
       <MUIAutocomplete/>
       <MUIBox />
        <MUIGrid/>
-          */}
+
       <MUIPaper />
+                */}
+      <MUICard />
     </div>
   );
 }
