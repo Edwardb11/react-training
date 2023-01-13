@@ -22,6 +22,7 @@ const MUIRating = () => {
         icon={<Person2Icon fontSize="inherit" color="error" />}
         emptyIcon={<InsertEmoticonIcon fontSize="inherit" />}
         // readOnly
+        highlightSelectedOnly
       />
     </Stack>
   );
