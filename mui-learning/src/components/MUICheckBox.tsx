@@ -4,6 +4,7 @@ import {
   FormControl,
   FormControlLabel,
   FormGroup,
+  FormHelperText,
   FormLabel,
 } from "@mui/material";
 import React from "react";
@@ -25,7 +26,7 @@ const MUICheckBox = () => {
     }
   };
   console.log(accep);
-  console.log({skills});
+  console.log({ skills });
   return (
     <Box>
       <Box>
@@ -77,6 +78,7 @@ const MUICheckBox = () => {
               }
             />
           </FormGroup>
+          <FormHelperText>Invalid action</FormHelperText>
         </FormControl>
       </Box>
     </Box>

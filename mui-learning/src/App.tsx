@@ -5,6 +5,7 @@ import MUITextField from "./components/MUITextField";
 import MUISelect from './components/MUISelect';
 import MUIRadioButton from "./components/MUIRadioButton";
 import MUICheckBox from "./components/MUICheckBox";
+import MUISwitch from "./components/MUISwitch";
 
 function App() {
   return (
@@ -13,9 +14,11 @@ function App() {
       <MUIButton/>
       <MUITextField/> 
       <MUISelect/> 
-      <MUIRadioButton/>  */}
+      <MUIRadioButton/> 
 
       <MUICheckBox/>
+       */}
+       <MUISwitch/>
     </div>
   );
 }
