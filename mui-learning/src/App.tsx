@@ -13,6 +13,7 @@ import MUIGrid from "./components/MUIGrid";
 import MUIPaper from "./components/MUIPaper";
 import MUICard from "./components/MUICard";
 import MUIAcordion from "./components/MUIAcordion";
+import MUIImgList from "./components/MUIImgList";
 
 function App() {
   return (
@@ -32,8 +33,10 @@ function App() {
       <MUIPaper />
             
       <MUICard />
-          */}
+
       <MUIAcordion />
+                */}
+      <MUIImgList />
     </div>
   );
 }
