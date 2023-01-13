@@ -9,6 +9,7 @@ import MUISwitch from "./components/MUISwitch";
 import MUIRating from "./components/MUIRating";
 import MUIAutocomplete from "./components/MUIAutocomplete";
 import MUIBox from "./components/MUIBox";
+import MUIGrid from "./components/MUIGrid";
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
       <MUISwitch/>
       <MUIRating/>
       <MUIAutocomplete/>
-                   */}
-                   <MUIBox/>
+      <MUIBox />
+       */}
+       <MUIGrid/>
     </div>
   );
 }
