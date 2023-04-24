@@ -4,6 +4,8 @@ import sass from "sass";
 
 export default defineConfig({
   plugins: [reactRefresh()],
+  base: "/",
+
   css: {
     preprocessorOptions: {
       scss: {
