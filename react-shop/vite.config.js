@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [reactRefresh()],
   css: {
     preprocessorOptions: {
-      sass: {
+      scss: {
         implementation: sass,
       },
     },
