@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import RecoveryPassword from "./containers/RecoveryPassword";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -11,6 +10,7 @@ import CreateAccount from "./pages/CreateAccount";
 import Layout from "./containers/Layout";
 import Checkout from "./pages/Checkout";
 import Orders from "./pages/Orders";
+import PasswordRecovery from "./pages/PasswordRecovery";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route
             exact
             path="/recovery-password"
-            element={<RecoveryPassword />}
+            element={<PasswordRecovery />}
           />
           <Route exact path="/send-email" element={SendEmail} />
           <Route exact path="/new-password" element={NewPassword} />
