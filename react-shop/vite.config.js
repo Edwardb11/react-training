@@ -4,7 +4,7 @@ import sass from "sass";
 import path from "path";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), "@babel/plugin-transform-runtime "],
   base: "/",
   resolve: {
     alias: {
